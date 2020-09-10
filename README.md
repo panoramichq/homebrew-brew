@@ -6,7 +6,7 @@ Panoramic Homebrew Cask
 
 Tap the Panoramic Homebrew Cask with
 
-    $ brew tap panoramic/brew
+    $ brew tap panoramichq/brew
 
 Install the Panoramic CLI with
 
