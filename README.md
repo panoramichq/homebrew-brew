@@ -10,11 +10,11 @@ Tap the Panoramic Homebrew Cask with
 
 Install the Panoramic CLI with
 
-    $ brew install pano-cli
+    $ brew install panoramic-cli
 
 Update the Panoramic CLI with
 
     $ brew update
-    $ brew upgrade pano-cli
+    $ brew upgrade panoramic-cli
 
 For more information, visit https://www.panoramichq.com
