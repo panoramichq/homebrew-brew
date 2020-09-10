@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -ex
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 brew update
 brew install Formula/pano-cli.rb
