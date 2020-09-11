@@ -108,6 +108,7 @@ class PanoramicCli < Formula
 
   def install
     virtualenv_install_with_resources :using => "python3"
-    bin.install_symlink "#{libexec}/bin/pano" => "pano"
+    rm_rf bin/"pano"
+    (bin/"pano").write_env_script "#{libexec}/bin/pano", :RUNNING_UNDER_HOMEBREW => "1"
   end
 end
