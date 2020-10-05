@@ -4,6 +4,6 @@ set -ex
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 brew update
-brew install Formula/panoramic-cli.rb
+brew install --build-from-source ./Formula/panoramic-cli.rb
 pano --version
 pano --help
