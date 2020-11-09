@@ -3,19 +3,19 @@ class PanoramicCli < Formula
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/b2/6b/acffe1be556cedfcd110325ffc3ccdbb73ed1ece2d061648a248899e1fc1/panoramic-cli-1.2.0.tar.gz"
-  sha256 "091270859ddd3615153d710d4f8214bd0eceb36c6ea5264b45c3b2cfc9147b43"
+  url "https://files.pythonhosted.org/packages/0b/1f/4f2fe93b09e5790d3ba6c79bbcd178eaf667ac74078ece8641f9beeaae4f/panoramic-cli-1.3.0.tar.gz"
+  sha256 "8ab6ed0284bd6f7b64c7db177eb9e7f38b0cfb1fac3b3b69eba1c7cb084e9a96"
 
   depends_on "python@3.8"
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/81/d0/641b698d05f0eaea4df4f9cebaff573d7a5276228ef6b7541240fe02f3ad/attrs-20.2.0.tar.gz"
-    sha256 "26b54ddbbb9ee1d34d5d3668dd37d6cf74990ab23c828c2888dccdceee395594"
+    url "https://files.pythonhosted.org/packages/0f/9e/26b1d194aab960063b266170e53c39f73ea0d0d3f5ce23313e0ec8ee9bdf/attrs-18.2.0.tar.gz"
+    sha256 "10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/40/a7/ded59fa294b85ca206082306bba75469a38ea1c7d44ea7e1d64f5443d67a/certifi-2020.6.20.tar.gz"
-    sha256 "5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3"
+    url "https://files.pythonhosted.org/packages/41/b6/4f0cefba47656583217acd6cd797bc2db1fede0d53090fdc28ad2c8e0716/certifi-2018.10.15.tar.gz"
+    sha256 "6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a"
   end
 
   resource "chardet" do
@@ -36,6 +36,16 @@ class PanoramicCli < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz"
     sha256 "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
+  end
+
+  resource "importlib-metadata" do
+    url "https://files.pythonhosted.org/packages/56/1f/74c3e29389d34feea2d62ba3de1169efea2566eb22e9546d379756860525/importlib_metadata-2.0.0.tar.gz"
+    sha256 "77a540690e24b0305878c37ffd421785a6f7e53c8b5720d211b211de8d0e95da"
+  end
+
+  resource "importlib-resources" do
+    url "https://files.pythonhosted.org/packages/d1/34/f2aedc50b3a32eefd249159ea7497ece70022e35f6531bd4718fd9688cb1/importlib_resources-3.3.0.tar.gz"
+    sha256 "7b51f0106c8ec564b1bef3d9c588bc694ce2b92125bbb6278f4f2f5b54ec3592"
   end
 
   resource "jsonschema" do
@@ -59,8 +69,8 @@ class PanoramicCli < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz"
-    sha256 "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"
+    url "https://files.pythonhosted.org/packages/5d/3a/24d275393f493004aeb15a1beae2b4a3043526e8b692b65b4a9341450ebe/pyparsing-2.4.0.tar.gz"
+    sha256 "1873c03321fc118f4e9746baf201ff990ceb915f433f23b395f5580d1840cb2a"
   end
 
   resource "pyrsistent" do
@@ -101,6 +111,11 @@ class PanoramicCli < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/76/d9/bbbafc76b18da706451fa91bc2ebe21c0daf8868ef3c30b869ac7cb7f01d/urllib3-1.25.11.tar.gz"
     sha256 "8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2"
+  end
+
+  resource "zipp" do
+    url "https://files.pythonhosted.org/packages/f9/c4/15a1260171956ed4f8190962b1771c7dbca4a39360c15f9c2b77e667a489/zipp-0.5.1.tar.gz"
+    sha256 "ca943a7e809cc12257001ccfb99e3563da9af99d52f261725e96dfe0f9275bc3"
   end
 
   def install
