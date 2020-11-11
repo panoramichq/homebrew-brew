@@ -3,19 +3,19 @@ class PanoramicCli < Formula
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/08/0e/563329361521f2f930997d3f194d81f652c460a3ba1f20e57e1d3721ade5/panoramic-cli-1.3.1.tar.gz"
-  sha256 "2b3a98ea3f69d4776037c4dbebd0f848e3e2ea7447df722b975d01d071e690b0"
+  url "https://files.pythonhosted.org/packages/fa/9c/9768c1b733c13fc697ad1ab07cf2cce454a7eb023745da744013ea4879f3/panoramic-cli-1.3.2.tar.gz"
+  sha256 "9ff2cf6299ba84ce9e0e5c93794b8bbbc85ccc758fcdc2c52ca1f03ba717478d"
 
   depends_on "python@3.8"
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/0f/9e/26b1d194aab960063b266170e53c39f73ea0d0d3f5ce23313e0ec8ee9bdf/attrs-18.2.0.tar.gz"
-    sha256 "10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69"
+    url "https://files.pythonhosted.org/packages/f0/cb/80a4a274df7da7b8baf083249b0890a0579374c3d74b5ac0ee9291f912dc/attrs-20.3.0.tar.gz"
+    sha256 "832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/41/b6/4f0cefba47656583217acd6cd797bc2db1fede0d53090fdc28ad2c8e0716/certifi-2018.10.15.tar.gz"
-    sha256 "6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a"
+    url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
+    sha256 "f05def092c44fbf25834a51509ef6e631dc19765ab8a57b4e7ab85531f0a9cf4"
   end
 
   resource "chardet" do
@@ -69,8 +69,8 @@ class PanoramicCli < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/5d/3a/24d275393f493004aeb15a1beae2b4a3043526e8b692b65b4a9341450ebe/pyparsing-2.4.0.tar.gz"
-    sha256 "1873c03321fc118f4e9746baf201ff990ceb915f433f23b395f5580d1840cb2a"
+    url "https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz"
+    sha256 "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"
   end
 
   resource "pyrsistent" do
@@ -114,8 +114,8 @@ class PanoramicCli < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/f9/c4/15a1260171956ed4f8190962b1771c7dbca4a39360c15f9c2b77e667a489/zipp-0.5.1.tar.gz"
-    sha256 "ca943a7e809cc12257001ccfb99e3563da9af99d52f261725e96dfe0f9275bc3"
+    url "https://files.pythonhosted.org/packages/ce/b0/757db659e8b91cb3ea47d90350d7735817fe1df36086afc77c1c4610d559/zipp-3.4.0.tar.gz"
+    sha256 "ed5eee1974372595f9e416cc7bbeeb12335201d8081ca8a0743c954d4446e5cb"
   end
 
   def install
