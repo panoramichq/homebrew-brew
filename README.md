@@ -1,7 +1,7 @@
 Panoramic Homebrew Cask
 -----------------------
 
-[![Build Status](https://travis-ci.org/panoramichq/homebrew-brew.svg?branch=master)](https://travis-ci.org/panoramichq/homebrew-brew)
+[![Build Status](https://github.com/panoramichq/homebrew-brew/workflows/CI/badge.svg)](https://github.com/panoramichq/homebrew-brew/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/panoramichq/homebrew-brew)](https://github.com/panoramichq/homebrew-brew/commits/master)
 
 Tap the Panoramic Homebrew Cask with
