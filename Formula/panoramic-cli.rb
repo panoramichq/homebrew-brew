@@ -3,8 +3,8 @@ class PanoramicCli < Formula
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/fa/9c/9768c1b733c13fc697ad1ab07cf2cce454a7eb023745da744013ea4879f3/panoramic-cli-1.3.2.tar.gz"
-  sha256 "9ff2cf6299ba84ce9e0e5c93794b8bbbc85ccc758fcdc2c52ca1f03ba717478d"
+  url "https://files.pythonhosted.org/packages/9b/6a/833ad8264c1af176b5b342b08eb38d01ff4f8c5b8f603a1256065a80c568/panoramic-cli-1.3.3.tar.gz"
+  sha256 "d586920b3b4e33cd369ccd6aae0acc6b5811783007fd678a16cc9111f037d3f0"
 
   depends_on "python@3.8"
 
@@ -41,11 +41,6 @@ class PanoramicCli < Formula
   resource "importlib-metadata" do
     url "https://files.pythonhosted.org/packages/56/1f/74c3e29389d34feea2d62ba3de1169efea2566eb22e9546d379756860525/importlib_metadata-2.0.0.tar.gz"
     sha256 "77a540690e24b0305878c37ffd421785a6f7e53c8b5720d211b211de8d0e95da"
-  end
-
-  resource "importlib-resources" do
-    url "https://files.pythonhosted.org/packages/d1/34/f2aedc50b3a32eefd249159ea7497ece70022e35f6531bd4718fd9688cb1/importlib_resources-3.3.0.tar.gz"
-    sha256 "7b51f0106c8ec564b1bef3d9c588bc694ce2b92125bbb6278f4f2f5b54ec3592"
   end
 
   resource "jsonschema" do
