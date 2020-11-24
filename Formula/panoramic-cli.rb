@@ -3,8 +3,8 @@ class PanoramicCli < Formula
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/dd/c2/563006c14546a36d854c90538f594b583bf7cd363264e2493589d963ef46/panoramic-cli-1.5.0b1.tar.gz"
-  sha256 "f0971bc650e9bda28970ba66c8dbf1e2f7f7cc0da1bd062d88c7d1c5bdd0ec78"
+  url "https://files.pythonhosted.org/packages/c1/e7/adbb804d68f6716a10855204ee4d828eb78ff32188dca3b1b8adc81e4d17/panoramic-cli-1.4.0.tar.gz"
+  sha256 "88dd245eba2fbb7e847b126ad7a48fc594726ce420fec9da9341a4207f37b999"
 
   depends_on "python@3.8"
 
