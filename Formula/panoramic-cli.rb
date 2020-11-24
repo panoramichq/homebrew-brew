@@ -6,6 +6,9 @@ class PanoramicCli < Formula
   url "https://files.pythonhosted.org/packages/c1/e7/adbb804d68f6716a10855204ee4d828eb78ff32188dca3b1b8adc81e4d17/panoramic-cli-1.4.0.tar.gz"
   sha256 "88dd245eba2fbb7e847b126ad7a48fc594726ce420fec9da9341a4207f37b999"
 
+  depends_on "libffi"
+  depends_on "openssl@1.1"
+  depends_on "postgresql"
   depends_on "python@3.8"
 
   resource "agate" do
@@ -404,8 +407,9 @@ class PanoramicCli < Formula
   end
 
   def install
-    virtualenv_install_with_resources :using => "python3"
-    rm_rf bin/"pano"
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resources
+    venv.pip_install buildpath
     (bin/"pano").write_env_script "#{libexec}/bin/pano", :RUNNING_UNDER_HOMEBREW => "1"
   end
 
