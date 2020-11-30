@@ -43,7 +43,8 @@ while read -r line; do
     echo "--------- COMMIT CHANGES -----------"
     git add $line
     git commit -m "${COMMIT_MSG}"
-    git push
+    echo $line
+    #git push
 
 done <<< "$FILES_BUILT"
 
