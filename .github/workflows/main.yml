@@ -27,3 +27,45 @@ jobs:
 
       - name: "Run tests"
         run: ./scripts/test
+
+  bottle-high-sierra:
+    name: "Generate bottle for High Sierra"
+    runs-on: macos-10.13
+
+    steps: &build-steps
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Cache Homebrew Bundler RubyGems
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      - name: Install Homebrew Bundler RubyGems
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems
+
+      - name: "Generate and upload bottle for formula"
+        run: ./scripts/bottle-formulas.sh
+
+  bottle-mojave:
+    name: "Generate bottle for Mojave"
+    runs-on: macos-10.14
+
+    steps: *build-steps
+
+  bottle-catalina:
+    name: "Generate bottle for Catalina"
+    runs-on: macos-10.15
+
+    steps: *build-steps
+
+  bottle-big-sur:
+    name: "Generate bottle for Big Sur"
+    runs-on: macos-11.0
+
+    steps: *build-steps
