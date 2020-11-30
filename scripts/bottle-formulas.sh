@@ -31,7 +31,7 @@ while read -r line; do
     echo "--------- SYNCING BOTTLES ---------"
     rename 's/--/-/g' *.json
     rename 's/--/-/g' *.tar.gz
-    aws s3 cp *.json s3://a1.panocdn.com/bottles
-    aws s3 cp *.tar.gz s3://a1.panocdn.com/bottles
+    aws s3 cp *.json s3://a1.panocdn.com/bottles/
+    aws s3 cp *.tar.gz s3://a1.panocdn.com/bottles/
 
 done <<< "$FILES_TO_BUILD"

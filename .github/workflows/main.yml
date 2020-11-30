@@ -29,13 +29,13 @@ jobs:
       #   run: ./scripts/test
 
   bottle-macos:
-    name: "Generate bottle for macOS"
+    name: "Generate bottle"
     runs-on: ${{ matrix.os }}
     needs: tests
 
     strategy:
       matrix:
-        os: ["macos-10.14", "macos-10.15", "macos-11.0"]
+        os: ["macos-10.15", "macos-11.0"]
 
     steps:
       - name: Set up Homebrew
