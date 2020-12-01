@@ -18,14 +18,14 @@ while read -r line; do
     FORMULA_NAME_WITH_RB_EXTENSION="${line/Formula\//}"
     FORMULA_NAME="${FORMULA_NAME_WITH_RB_EXTENSION/.rb/}"
     if [[ "$FORMULA_NAME" == "panoramic-cli" ]]; then
-        FORMULA_VERSION=$(grep '^  url' Formula/panoramic-cli.rb | head -1 | sed 's#.*/panoramic-cli-\([0-9].*\)\.tar\.gz"#\1#')
+        FORMULA_VERSION=$(grep '^  url' Formula/panoramic-cli.rb | head -1 | sed 's#.*/panoramic-cli-\([0-9a-z].*\)\.tar\.gz"#\1#')
         JSON_NAME="^panoramic-cli-${FORMULA_VERSION//./\.}.*\.json"
-        COMMIT_MSG="[BOT] panoramic-cli ${FORMULA_VERSION} bottled"
+        COMMIT_MSG="[BOT] panoramic-cli ${FORMULA_VERSION} bottled [SKIP-BTL]"
     else
         FORMULA_VERSION="${FORMULA_NAME/#panoramic-cli@/}"
         FORMULA_VERSION_NOHYPHEN="${FORMULA_VERSION/-/}"
         JSON_NAME="${FORMULA_NAME//./\.}-${FORMULA_VERSION_NOHYPHEN//./\.}.*\.json"
-        COMMIT_MSG="[BOT] panoramic-cli ${FORMULA_NAME} bottled"
+        COMMIT_MSG="[BOT] panoramic-cli ${FORMULA_NAME} bottled [SKIP-BTL]"
     fi
     [[ -z $FORMULA_NAME ]] && echo "No formula name found???" && exit 1
 

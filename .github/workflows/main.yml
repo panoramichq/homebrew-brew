@@ -25,6 +25,14 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
+      # NOTE: Getting rid of formulas that are *slow*
+      # This list may need to be updated as images change...
+      - name: Remove unneeded formulas
+        run: |
+          brew uninstall php || true
+          brew uninstall azure-cli || true
+          brew uninstall aws-sam-cli || true
+
       - name: "Run tests"
         run: ./scripts/test
 
@@ -32,6 +40,7 @@ jobs:
     name: "Generate bottle"
     runs-on: ${{ matrix.os }}
     needs: tests
+    if: "!contains(github.event.head_commit.message, 'SKIP-BTL')"
 
     strategy:
       matrix:
@@ -58,6 +67,14 @@ jobs:
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
+
+      # NOTE: Getting rid of formulas that are *slow*
+      # This list may need to be updated as images change...
+      - name: Remove unneeded formulas
+        run: |
+          brew uninstall php || true
+          brew uninstall azure-cli || true
+          brew uninstall aws-sam-cli || true
 
       - name: "Generate and upload bottle for formula"
         run: ./scripts/bottle-formulas.sh
