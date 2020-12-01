@@ -25,57 +25,57 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
-      # - name: "Run tests"
-      #   run: ./scripts/test
+      - name: "Run tests"
+        run: ./scripts/test
 
-  # bottle-macos:
-  #   name: "Generate bottle"
-  #   runs-on: ${{ matrix.os }}
-  #   needs: tests
+  bottle-macos:
+    name: "Generate bottle"
+    runs-on: ${{ matrix.os }}
+    needs: tests
 
-  #   strategy:
-  #     matrix:
-  #       os: ["macos-10.15", "macos-11.0"]
+    strategy:
+      matrix:
+        os: ["macos-10.15", "macos-11.0"]
 
-  #   steps:
-  #     - name: Use latest stable XCode
-  #       uses: maxim-lobanov/setup-xcode@v1
-  #       with:
-  #         xcode-version: latest-stable
+    steps:
+      - name: Use latest stable XCode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
 
-  #     - name: Set up Homebrew
-  #       id: set-up-homebrew
-  #       uses: Homebrew/actions/setup-homebrew@master
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
 
-  #     - name: Cache Homebrew Bundler RubyGems
-  #       id: cache
-  #       uses: actions/cache@v1
-  #       with:
-  #         path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-  #         key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-  #         restore-keys: ${{ runner.os }}-rubygems-
+      - name: Cache Homebrew Bundler RubyGems
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
 
-  #     - name: Install Homebrew Bundler RubyGems
-  #       if: steps.cache.outputs.cache-hit != 'true'
-  #       run: brew install-bundler-gems
+      - name: Install Homebrew Bundler RubyGems
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems
 
-  #     - name: "Generate and upload bottle for formula"
-  #       run: ./scripts/bottle-formulas.sh
-  #       env:
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: "Generate and upload bottle for formula"
+        run: ./scripts/bottle-formulas.sh
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
   update-formulas:
     name: "Update Formula with Bottles"
     runs-on: ubuntu-latest
-    # needs: bottle-macos
+    needs: bottle-macos
 
     steps:
       - name: "Checkout code"
         uses: "actions/checkout@v2"
         with:
-          fetch-depth: 0
+          fetch-depth: 3
 
       - uses: "actions/setup-python@v2"
         with:
