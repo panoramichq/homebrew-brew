@@ -20,7 +20,7 @@ while read -r line; do
     FORMULA_NAME="${FORMULA_NAME_WITH_RB_EXTENSION/.rb/}"
     if [[ "$FORMULA_NAME" == "panoramic-cli" ]]; then
         FORMULA_VERSION=$(grep '^  url' Formula/panoramic-cli.rb | head -1 | sed 's#.*/panoramic-cli-\([0-9].*\)\.tar\.gz"#\1#')
-        JSON_NAME="^panoramic-cli-${FORMULA_VERSION//./\.}_.*\.json"
+        JSON_NAME="^panoramic-cli-${FORMULA_VERSION//./\.}.*\.json"
         COMMIT_MSG="[BOT] panoramic-cli ${FORMULA_VERSION} bottled"
     else
         FORMULA_VERSION="${FORMULA_NAME/#panoramic-cli@/}"
@@ -33,8 +33,6 @@ while read -r line; do
     echo "------ COLLECTING JSON FILES -------"
     [[ -e json ]] && rm -r json
     mkdir -p json
-    echo $JSON_NAME
-    python -m awscli s3 ls 's3://a1.panocdn.com/bottles/'
     JSON_FILES=$(python -m awscli s3 ls 's3://a1.panocdn.com/bottles/' | awk '{print $4}' | grep "${JSON_NAME}")
     while read -r json_path; do
         echo "copying s3://a1.panocdn.com/bottles/${json_path}"
@@ -48,6 +46,7 @@ while read -r line; do
     git add $line
     git commit -m "${COMMIT_MSG}"
     echo $line
+    cat $line
     #git push
 
 done <<< "$FILES_BUILT"
