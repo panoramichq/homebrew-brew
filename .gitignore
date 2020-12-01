@@ -3,3 +3,4 @@ build/
 images/
 !images/.gitkeep
 .DS_Store
+json/

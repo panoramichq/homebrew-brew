@@ -6,6 +6,11 @@ class PanoramicCli < Formula
   url "https://files.pythonhosted.org/packages/c1/e7/adbb804d68f6716a10855204ee4d828eb78ff32188dca3b1b8adc81e4d17/panoramic-cli-1.4.0.tar.gz"
   sha256 "88dd245eba2fbb7e847b126ad7a48fc594726ce420fec9da9341a4207f37b999"
 
+  bottle do
+    root_url "https://a1.panocdn.com/bottles"
+    # bottle hashes + versions go here
+  end
+
   depends_on "libffi"
   depends_on "openssl@1.1"
   depends_on "postgresql"
