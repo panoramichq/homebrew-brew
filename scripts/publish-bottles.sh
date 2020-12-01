@@ -33,6 +33,8 @@ while read -r line; do
     echo "------ COLLECTING JSON FILES -------"
     [[ -e json ]] && rm -r json
     mkdir -p json
+    echo $JSON_NAME
+    echo $(python -m awscli s3 ls 's3://a1.panocdn.com/bottles/')
     JSON_FILES=$(python -m awscli s3 ls 's3://a1.panocdn.com/bottles/' | awk '{print $4}' | grep "${JSON_NAME}")
     while read -r json_path; do
         echo "copying s3://a1.panocdn.com/bottles/${json_path}"
