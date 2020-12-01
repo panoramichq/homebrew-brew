@@ -77,6 +77,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.6"
+
       - name: "Update bottle"
         run: ./scripts/publish-bottles.sh
         env:

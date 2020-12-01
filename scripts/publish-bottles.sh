@@ -1,14 +1,15 @@
 #!/bin/bash
 
+set -e
+
 FILES_BUILT=$(git diff --name-status HEAD~1 HEAD | grep '^[AM]' | grep 'Formula' | cut -f2)
 FILES_BUILT=$(git diff --name-status 97a25a45d9d5f229cd4e0979fb08dab50dfc21a9 HEAD | grep '^[AM]' | grep 'Formula' | cut -f2)
-
-ls -alh
 
 [ -z "$FILES_BUILT" ] && echo "No formulae to bottle right now." && exit 0
 
 echo "Collecting signatures for $FILES_BUILT"
 
+python -m pip install -U pip
 pip install awscli
 
 git config user.email "panoramic-ci@users.noreply.github.com"
