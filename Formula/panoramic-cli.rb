@@ -3,14 +3,8 @@ class PanoramicCli < Formula
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/c1/e7/adbb804d68f6716a10855204ee4d828eb78ff32188dca3b1b8adc81e4d17/panoramic-cli-1.4.0.tar.gz"
-  sha256 "88dd245eba2fbb7e847b126ad7a48fc594726ce420fec9da9341a4207f37b999"
-
-  bottle do
-    root_url "https://a1.panocdn.com/bottles"
-    sha256 "e303d84befede8bee15229b0a8f985e441d4e30683833ba1a3de2cf92fc1b97b" => :catalina
-    sha256 "57d118fe3101ea69cf5992df3ed4c0ba2d488bb29152419b9986e822894c4faf" => :big_sur
-  end
+  url "https://files.pythonhosted.org/packages/40/da/7db57335a4a8b65e0401d256e91aa24743b3b7fa506e80db1af4535cb2e2/panoramic-cli-1.5.1b2.tar.gz"
+  sha256 "c1a99e37df00b996f30e7efb93e81f9e23a155a8354c8637562fa6242618c7c2"
 
   depends_on "libffi"
   depends_on "openssl@1.1"
@@ -20,6 +14,11 @@ class PanoramicCli < Formula
   resource "agate" do
     url "https://files.pythonhosted.org/packages/d4/1c/99fb34c81c68012c71e8d35a1f16a6b25952322e23c911c81327c8464be8/agate-1.6.1.tar.gz"
     sha256 "c93aaa500b439d71e4a5cf088d0006d2ce2c76f1950960c8843114e5f361dfd3"
+  end
+
+  resource "analytics-python" do
+    url "https://files.pythonhosted.org/packages/6d/ae/affa8190ad884f9654483201f6fe71465bd59263b3365c0e3b544cd36203/analytics-python-1.2.9.tar.gz"
+    sha256 "f3d1ca27cb277da67c10d71a5c9c593d2a9ec99109e31409ab771b44821a86bf"
   end
 
   resource "asn1crypto" do
@@ -183,8 +182,8 @@ class PanoramicCli < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/7d/d4/dbc58eed92be61bae65a7d80a7604d35bf6ded3e3c53c14f2d45b4a28831/importlib_metadata-3.1.0.tar.gz"
-    sha256 "d9b8a46a0885337627a6430db287176970fff18ad421becec1d64cfc763c2099"
+    url "https://files.pythonhosted.org/packages/3f/a8/16dc098b0addd1c20719c18a86e985be851b3ec1e103e703297169bb22cc/importlib_metadata-3.1.1.tar.gz"
+    sha256 "b0c2d3b226157ae4517d9625decf63591461c66b3a808c2666d538946519d170"
   end
 
   resource "importlib-resources" do
@@ -268,8 +267,8 @@ class PanoramicCli < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz"
-    sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
+    url "https://files.pythonhosted.org/packages/16/7c/33ae3aa02eb10ca726b21aa88d338e3f619c674e4fb8544eb352330d880a/packaging-20.7.tar.gz"
+    sha256 "05af3bb85d320377db281cf254ab050e1a7ebcbf5410685a9a407e18a1f81236"
   end
 
   resource "panoramic-auth" do
@@ -408,8 +407,8 @@ class PanoramicCli < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/db/af/6af426ad64a4e89696069f8a87d985c10a79e4c6f975ac772b676afc21a5/tqdm-4.53.0.tar.gz"
-    sha256 "3d3f1470d26642e88bd3f73353cb6ff4c51ef7d5d7efef763238f4bc1f7e4e81"
+    url "https://files.pythonhosted.org/packages/3a/76/467422c5a0157c92a8b8e1ffe14411443682e2951e6f6dde3748e47b31ba/tqdm-4.54.0.tar.gz"
+    sha256 "5c0d04e06ccc0da1bd3fa5ae4550effcce42fcad947b4a6cafa77bdc9b09ff22"
   end
 
   resource "typing-extensions" do
@@ -443,4 +442,3 @@ class PanoramicCli < Formula
     false
   end
 end
-
