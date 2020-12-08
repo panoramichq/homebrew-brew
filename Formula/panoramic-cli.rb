@@ -1,15 +1,15 @@
-class PanoramicCli < Formula
+class PanoramicCliAT150 < Formula
   include Language::Python::Virtualenv
 
   desc "Panoramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
-  url "https://files.pythonhosted.org/packages/c1/e7/adbb804d68f6716a10855204ee4d828eb78ff32188dca3b1b8adc81e4d17/panoramic-cli-1.4.0.tar.gz"
-  sha256 "88dd245eba2fbb7e847b126ad7a48fc594726ce420fec9da9341a4207f37b999"
+  url "https://files.pythonhosted.org/packages/92/3c/8b4f814953113416d8f1e3e1ba122106a04b8615b761c9d9f807143bd015/panoramic-cli-1.5.0.tar.gz"
+  sha256 "c2b0a3ea355cbe33542d27a7a7b01f826686806533605b64ba8cff467bb591f7"
 
   bottle do
     root_url "https://a1.panocdn.com/bottles"
-    sha256 "e303d84befede8bee15229b0a8f985e441d4e30683833ba1a3de2cf92fc1b97b" => :catalina
-    sha256 "57d118fe3101ea69cf5992df3ed4c0ba2d488bb29152419b9986e822894c4faf" => :big_sur
+    sha256 "e6b8fe8cf6e617f63832c8a08473320571175341c57f3a61264a3258775c7591" => :catalina
+    sha256 "fa955d97a51c2416c99676dbb3f952157b07307fba2be83daf8f5efb5507455f" => :big_sur
   end
 
   depends_on "libffi"
@@ -68,8 +68,8 @@ class PanoramicCli < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
-    sha256 "f05def092c44fbf25834a51509ef6e631dc19765ab8a57b4e7ab85531f0a9cf4"
+    url "https://files.pythonhosted.org/packages/06/a9/cd1fd8ee13f73a4d4f491ee219deeeae20afefa914dfb4c130cfc9dc397a/certifi-2020.12.5.tar.gz"
+    sha256 "1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"
   end
 
   resource "cffi" do
@@ -183,8 +183,8 @@ class PanoramicCli < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/7d/d4/dbc58eed92be61bae65a7d80a7604d35bf6ded3e3c53c14f2d45b4a28831/importlib_metadata-3.1.0.tar.gz"
-    sha256 "d9b8a46a0885337627a6430db287176970fff18ad421becec1d64cfc763c2099"
+    url "https://files.pythonhosted.org/packages/3f/a8/16dc098b0addd1c20719c18a86e985be851b3ec1e103e703297169bb22cc/importlib_metadata-3.1.1.tar.gz"
+    sha256 "b0c2d3b226157ae4517d9625decf63591461c66b3a808c2666d538946519d170"
   end
 
   resource "importlib-resources" do
@@ -268,8 +268,8 @@ class PanoramicCli < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz"
-    sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
+    url "https://files.pythonhosted.org/packages/16/7c/33ae3aa02eb10ca726b21aa88d338e3f619c674e4fb8544eb352330d880a/packaging-20.7.tar.gz"
+    sha256 "05af3bb85d320377db281cf254ab050e1a7ebcbf5410685a9a407e18a1f81236"
   end
 
   resource "panoramic-auth" do
@@ -408,8 +408,8 @@ class PanoramicCli < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/db/af/6af426ad64a4e89696069f8a87d985c10a79e4c6f975ac772b676afc21a5/tqdm-4.53.0.tar.gz"
-    sha256 "3d3f1470d26642e88bd3f73353cb6ff4c51ef7d5d7efef763238f4bc1f7e4e81"
+    url "https://files.pythonhosted.org/packages/80/e9/a51c724ce67ff24a18861af5b0c6f9468e4b4ecdbd53fd43a9288b856372/tqdm-4.54.1.tar.gz"
+    sha256 "38b658a3e4ecf9b4f6f8ff75ca16221ae3378b2e175d846b6b33ea3a20852cf5"
   end
 
   resource "typing-extensions" do
@@ -443,4 +443,3 @@ class PanoramicCli < Formula
     false
   end
 end
-
