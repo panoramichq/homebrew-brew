@@ -8,7 +8,8 @@ class PanoramicCliAT151b5 < Formula
 
   bottle do
     root_url "https://a1.panocdn.com/bottles"
-    # bottle hashes + versions go here
+    sha256 "025c462efb95dc0f0674703c9d737ec9829e09c31dddc72c171c78bc8ec671b2" => :big_sur
+    sha256 "52adc1b4f25d37d831523874632e7ad34618216709bcf0e3568e0b2487871cd2" => :catalina
   end
 
   depends_on "libffi"
