@@ -447,3 +447,4 @@ class PanoramicCli < Formula
     false
   end
 end
+
