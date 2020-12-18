@@ -33,4 +33,7 @@ while read -r line; do
     aws s3 cp *.json s3://a1.panocdn.com/bottles/
     aws s3 cp *.tar.gz s3://a1.panocdn.com/bottles/
 
+    echo "---- UNINSTALL BOTTLE ----"
+    brew uninstall "Formula/$FORMULA_NAME_WITH_RB_EXTENSION" || true
+
 done <<< "$FILES_TO_BUILD"
