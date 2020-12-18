@@ -1,4 +1,4 @@
-class PanoramicCli < Formula
+class PanoramicCliAT171 < Formula
   include Language::Python::Virtualenv
 
   desc "Panoramic Command Line Interface"
