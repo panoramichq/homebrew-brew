@@ -1,7 +1,7 @@
-class Pano < Formula
+class PanoAT210 < Formula
   include Language::Python::Virtualenv
 
-  desc "Panoramic Command Line Interface"
+  desc "PanoAT210ramic Command Line Interface"
   homepage "https://github.com/panoramichq/panoramic-cli"
   url "https://files.pythonhosted.org/packages/e7/4a/3a8c9a29d060eba68df04e4d9199e94e3e52cf68206599ac8b60b8bc747d/pano-2.1.0.tar.gz"
   sha256 "90066e7623a342d2de50cc54671d9d47a8e4a90722a6285fd73c7c9485d1170d"
